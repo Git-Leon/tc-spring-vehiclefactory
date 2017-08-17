@@ -4,9 +4,7 @@ import io.zipcoder.tc_spring_personfactory_application.domain.Vehicle;
 import io.zipcoder.tc_spring_personfactory_application.repository.VehicleRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 
@@ -23,5 +21,11 @@ public class VehicleController {
     public ResponseEntity<Iterable<Vehicle>> getAllVehicles() {
         Iterable<Vehicle> allVehicles = vehicleRepository.findAll();
         return new ResponseEntity<>(allVehicles, HttpStatus.OK);
+    }
+
+    @PostMapping(value="/{vehicleId}")
+    public ResponseEntity<?> getVehicle(@PathVariable Long vehicleId) {
+        Vehicle vehicle = vehicleRepository.findOne(vehicleId);
+        return new ResponseEntity<> (vehicle, HttpStatus.OK);
     }
 }

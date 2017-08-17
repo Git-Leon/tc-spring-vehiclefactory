@@ -7,6 +7,6 @@ import io.zipcoder.tc_spring_personfactory_application.domain.VehicleMake;
  */
 public class RandomHondaCarFactory extends RandomCarFactory {
     public Car create() {
-        return super.createMake(VehicleMake.getRandom());
+        return super.createMake(VehicleMake.HONDA);
     }
 }

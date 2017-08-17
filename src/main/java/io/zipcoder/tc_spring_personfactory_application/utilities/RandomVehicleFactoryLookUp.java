@@ -18,7 +18,6 @@ public final class RandomVehicleFactoryLookUp {
         addToMap(new RandomHondaCarFactory(), new RandomYamahaBikeFactory());
     }
 
-
     public AbstractRandomVehicleFactory get(String simpleClassName) {
         AbstractRandomVehicleFactory arvFactory = map.get(simpleClassName);
         if(arvFactory == null) {
