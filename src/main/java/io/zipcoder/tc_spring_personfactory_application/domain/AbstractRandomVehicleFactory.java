@@ -5,7 +5,7 @@ import io.zipcoder.tc_spring_personfactory_application.utilities.AbstractRandomE
 
 /**
  * Created by leon on 8/16/17.
- * Factories which extend this class must generate objects of type Vehicle
+ * Subclass of this class must generate objects of type Vehicle
  */
 abstract public class AbstractRandomVehicleFactory<E extends Vehicle> extends AbstractRandomEntityFactory<E> {
     abstract public E createMake(String make);

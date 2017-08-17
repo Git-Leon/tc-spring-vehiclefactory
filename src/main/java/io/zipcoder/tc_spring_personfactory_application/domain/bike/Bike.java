@@ -9,7 +9,7 @@ import javax.persistence.Entity;
  */
 @Entity
 public class Bike extends Vehicle {
-    public Bike() {}
+    public Bike() {} // This constructor is used by Spring
     public Bike(String make, String model, boolean isHybrid) {
         super(make, model, 2, isHybrid);
     }

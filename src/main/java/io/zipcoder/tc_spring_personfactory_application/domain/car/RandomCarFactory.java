@@ -6,6 +6,7 @@ import io.zipcoder.tc_spring_personfactory_application.utilities.RandomUtils;
 
 /**
  * Created by leon on 8/16/17.
+ * Subclass of this class must generate objects of type Car
  */
 abstract public class RandomCarFactory extends AbstractRandomVehicleFactory<Car> {
     public Car createMake(String make) {
