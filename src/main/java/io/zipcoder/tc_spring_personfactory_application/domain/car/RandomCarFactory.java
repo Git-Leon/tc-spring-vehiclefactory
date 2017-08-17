@@ -7,7 +7,7 @@ import io.zipcoder.tc_spring_personfactory_application.utilities.RandomUtils;
 /**
  * Created by leon on 8/16/17.
  */
-public abstract class RandomCarFactory extends AbstractRandomVehicleFactory<Car> {
+abstract public class RandomCarFactory extends AbstractRandomVehicleFactory<Car> {
     public Car createMake(VehicleMake make) {
         return createMake(make.name());
     }

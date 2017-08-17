@@ -9,6 +9,7 @@ import io.zipcoder.tc_spring_personfactory_application.utilities.AbstractRandomE
  */
 abstract public class AbstractRandomVehicleFactory<E extends Vehicle> extends AbstractRandomEntityFactory<E> {
     abstract public E createMake(VehicleMake make);
+    abstract public E createMake(String make);
 
     public E create() {
         VehicleMake randomMake = VehicleMake.getRandom();
