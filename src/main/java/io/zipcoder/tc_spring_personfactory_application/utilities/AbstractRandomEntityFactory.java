@@ -7,7 +7,7 @@ import java.util.stream.Stream;
  */
 public abstract class AbstractRandomEntityFactory<E> {
     abstract public E create();
-    public Stream<E> createStream(int numberOfVehicles) {
+    public final Stream<E> createStream(int numberOfVehicles) {
         return Stream.generate(this::create).limit(numberOfVehicles);
     }
 }

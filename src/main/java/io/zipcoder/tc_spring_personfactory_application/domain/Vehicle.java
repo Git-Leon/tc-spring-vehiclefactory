@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by leon on 8/14/17.
  */
 @Entity
-public class Vehicle {
+abstract public class Vehicle {
     @Id
     @GeneratedValue
     @Column(name = "VEHICLE_ID")
