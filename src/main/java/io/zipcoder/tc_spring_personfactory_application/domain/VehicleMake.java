@@ -7,11 +7,5 @@ import java.util.Random;
 /**
  * Created by leon on 8/16/17.
  */
-public enum VehicleMake {
-    HONDA,
-    YAMAHA;
-
-    public static VehicleMake getRandom() {
-        return RandomUtils.selectElement(values());
-    }
+public class VehicleMake {
 }

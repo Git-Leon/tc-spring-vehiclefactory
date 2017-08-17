@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by leon on 8/14/17.
  */
-public interface VehicleRepository extends CrudRepository<Vehicle, Long> {
+public class VehicleRepository {
 }

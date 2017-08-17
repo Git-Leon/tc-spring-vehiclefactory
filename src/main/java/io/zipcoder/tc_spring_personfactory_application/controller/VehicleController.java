@@ -11,21 +11,5 @@ import javax.inject.Inject;
 /**
  * Created by leon on 8/14/17.
  */
-@RestController
-@RequestMapping(value = "/vehicles")
 public class VehicleController {
-    @Inject
-    private VehicleRepository vehicleRepository;
-
-    @GetMapping
-    public ResponseEntity<Iterable<Vehicle>> getAllVehicles() {
-        Iterable<Vehicle> allVehicles = vehicleRepository.findAll();
-        return new ResponseEntity<>(allVehicles, HttpStatus.OK);
-    }
-
-    @PostMapping(value="/{vehicleId}")
-    public ResponseEntity<?> getVehicle(@PathVariable Long vehicleId) {
-        Vehicle vehicle = vehicleRepository.findOne(vehicleId);
-        return new ResponseEntity<> (vehicle, HttpStatus.OK);
-    }
 }
