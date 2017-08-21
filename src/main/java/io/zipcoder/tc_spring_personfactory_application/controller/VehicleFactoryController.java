@@ -3,7 +3,7 @@ package io.zipcoder.tc_spring_personfactory_application.controller;
 import io.zipcoder.tc_spring_personfactory_application.domain.AbstractRandomVehicleFactory;
 import io.zipcoder.tc_spring_personfactory_application.domain.Vehicle;
 import io.zipcoder.tc_spring_personfactory_application.repository.VehicleRepository;
-import io.zipcoder.tc_spring_personfactory_application.utilities.RandomVehicleFactoryLookUp;
+import io.zipcoder.tc_spring_personfactory_application.services.RandomVehicleFactoryLookUp;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

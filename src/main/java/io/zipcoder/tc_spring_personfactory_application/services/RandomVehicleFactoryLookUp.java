@@ -1,7 +1,8 @@
-package io.zipcoder.tc_spring_personfactory_application.utilities;
+package io.zipcoder.tc_spring_personfactory_application.services;
 
 import io.zipcoder.tc_spring_personfactory_application.domain.AbstractRandomVehicleFactory;
-import io.zipcoder.tc_spring_personfactory_application.domain.bike.RandomYamahaBikeCreator;
+import io.zipcoder.tc_spring_personfactory_application.domain.RandomVehicleFactoryCreator;
+import io.zipcoder.tc_spring_personfactory_application.domain.bike.RandomYamahaBikeFactory;
 import io.zipcoder.tc_spring_personfactory_application.domain.car.RandomHondaCarFactory;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +16,10 @@ public final class RandomVehicleFactoryLookUp {
     private HashMap<String, AbstractRandomVehicleFactory> map = new HashMap<>();
 
     public RandomVehicleFactoryLookUp() {
+        RandomHondaCarFactory rhcf = RandomVehicleFactoryCreator.createHondaCarFactory();
+        RandomYamahaBikeFactory rybf = RandomVehicleFactoryCreator.createYamahaBikeFactory();
         addToMap(new RandomHondaCarFactory(),
-                new RandomYamahaBikeCreator());
+                new RandomYamahaBikeFactory());
     }
 
     public AbstractRandomVehicleFactory get(String simpleClassName) {
